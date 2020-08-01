@@ -3,4 +3,5 @@ This webpage that show nice parallex effect using javascript library Rellax.js a
 
 # Demo 
 
+https://parallax-rellax.netlify.app/
 
