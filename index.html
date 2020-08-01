@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallex-Effect</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <section>
+      <img src="assets/bg.jpg" alt="background" class="rellax" data-rellax-speed="6"/>
+      <img src="assets/moon.png" alt="moon" id="moon"/>
+      <img src="assets/mountain.png" alt="mountain" class="rellax" data-rellax-speed="3"/>
+      <img src="assets/road.png" alt="road" id="road" class="rellax"  />
+      <h2 id="text" >Moon Light</h2>
+    </section>
+    <div class="box" data-scroll>
+      <h2 id="heading" data-scroll>Parallex Scrolling Using Rellax.js and Scroll Out</h2>
+      
+      <p >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+        alias, culpa voluptatum ipsum similique ea nesciunt magni, suscipit
+        perspiciatis nulla distinctio accusamus expedita possimus, corporis
+        molestias inventore asperiores laudantium amet?Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Illo ipsam vero, veniam doloribus
+        quis autem ducimus quasi facere error, ea sit maiores libero quisquam
+        cumque tempore nulla impedit. Sed, Lorem ipsum dolor sit amet consectetur,
+         adipisicing elit. Asperiores tempore error obcaecati illum aperiam tenetur at commodi numquam expedita deserunt temporibus eum fugit praesentium eaque mollitia ab, debitis placeat vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, unde. Perferendis minima ratione a ad architecto incidunt assumenda alias! Doloremque veniam voluptatibus assumenda magnam. Sed voluptas illum dolor! Est, mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veniam quisquam sunt suscipit maxime nostrum sequi aut laboriosam necessitatibus ullam esse at, itaque officiis! Nulla voluptate in iure numquam. Vitae!</autem>
+      </p>
+
+
+      <p >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+        alias, culpa voluptatum ipsum similique ea nesciunt magni, suscipit
+        perspiciatis nulla distinctio accusamus expedita possimus, corporis
+        molestias inventore asperiores laudantium amet?Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Illo ipsam vero, veniam doloribus
+        quis autem ducimus quasi facere error, ea sit maiores libero quisquam
+        cumque tempore nulla impedit. Sed, Lorem ipsum dolor sit amet consectetur,
+         adipisicing elit. Asperiores tempore error obcaecati illum aperiam tenetur at commodi numquam expedita deserunt temporibus eum fugit praesentium eaque mollitia ab, debitis placeat vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, unde. Perferendis minima ratione a ad architecto incidunt assumenda alias! Doloremque veniam voluptatibus assumenda magnam. Sed voluptas illum dolor! Est, mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veniam quisquam sunt suscipit maxime nostrum sequi aut laboriosam necessitatibus ullam esse at, itaque officiis! Nulla voluptate in iure numquam. Vitae!</autem>
+      </p>
+
+      <p >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+        alias, culpa voluptatum ipsum similique ea nesciunt magni, suscipit
+        perspiciatis nulla distinctio accusamus expedita possimus, corporis
+        molestias inventore asperiores laudantium amet?Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Illo ipsam vero, veniam doloribus
+        quis autem ducimus quasi facere error, ea sit maiores libero quisquam
+        cumque tempore nulla impedit. Sed, Lorem ipsum dolor sit amet consectetur,
+         adipisicing elit. Asperiores tempore error obcaecati illum aperiam tenetur at commodi numquam expedita deserunt temporibus eum fugit praesentium eaque mollitia ab, debitis placeat vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, unde. Perferendis minima ratione a ad architecto incidunt assumenda alias! Doloremque veniam voluptatibus assumenda magnam. Sed voluptas illum dolor! Est, mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veniam quisquam sunt suscipit maxime nostrum sequi aut laboriosam necessitatibus ullam esse at, itaque officiis! Nulla voluptate in iure numquam. Vitae!</autem>
+      </p>
+    
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
+    <script>
+      ScrollOut({
+        threshold:.6
+      })
+        
+        var rellax = new Rellax(".rellax");
+        let moon = document.getElementById("moon");
+        let text = document.getElementById("text");
+        window.addEventListener("scroll",()=>{
+            let value = window.scrollY;
+            moon.style.left = -value*0.5+"px";
+            text.style.top = value*0.5+"px";
+        })
+    </script>
+  </body>
+</html>
